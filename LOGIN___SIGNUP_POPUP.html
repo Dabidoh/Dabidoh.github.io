@@ -4,16 +4,16 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOME</title>
+<title>LOGIN / SIGNUP POPUP</title>
 <style id="applicationStylesheet" type="text/css">
 	.mediaViewInfo {
-		--web-view-name: HOME;
-		--web-view-id: HOME;
+		--web-view-name: LOGIN / SIGNUP POPUP;
+		--web-view-id: LOGIN__SIGNUP_POPUP;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
 	}
 	:root {
-		--web-view-ids: HOME;
+		--web-view-ids: LOGIN__SIGNUP_POPUP;
 	}
 	* {
 		margin: 0;
@@ -21,14 +21,14 @@
 		box-sizing: border-box;
 		border: none;
 	}
-	#HOME {
+	#LOGIN__SIGNUP_POPUP {
 		position: absolute;
-		width: 1920px;
-		height: 1080px;
+		width: 1080px;
+		height: 800px;
 		background-color: rgba(255,255,255,1);
 		overflow: hidden;
-		--web-view-name: HOME;
-		--web-view-id: HOME;
+		--web-view-name: LOGIN / SIGNUP POPUP;
+		--web-view-id: LOGIN__SIGNUP_POPUP;
 		--web-scale-on-resize: true;
 		--web-enable-deep-linking: true;
 	}
@@ -42,74 +42,27 @@
 		}
 	
 	}
-	#Layer_1 {
+	#Rectangle_3 {
+		fill: rgba(32,32,32,1);
+	}
+	.Rectangle_3 {
 		position: absolute;
-		width: 0px;
-		height: 0px;
+		overflow: visible;
+		width: 1080px;
+		height: 800px;
 		left: 0px;
 		top: 0px;
-		overflow: visible;
+		--web-animation: fadein 0.3s ease-out;
+		--web-action-type: page;
+		--web-action-target: PACKAGES.html;
+		cursor: pointer;
 	}
-	#Rectangle_1 {
-		fill: rgba(51,53,51,1);
-	}
-	.Rectangle_1 {
+	#LOGIN {
+		left: 453.226px;
+		top: 48.461px;
 		position: absolute;
 		overflow: visible;
-		width: 1920px;
-		height: 1080px;
-		left: 0px;
-		top: 0px;
-	}
-	#Rectangle_2 {
-		position: absolute;
-		width: 1920px;
-		height: 691px;
-		left: 0px;
-		top: 0px;
-		overflow: visible;
-	}
-	#Rectangle_2_p {
-		fill: rgba(51,53,51,1);
-	}
-	.Rectangle_2_p {
-		position: absolute;
-		overflow: visible;
-		width: 1920px;
-		height: 691px;
-		left: 0px;
-		top: 0px;
-	}
-	#Clip {
-		position: absolute;
-		width: 1920px;
-		height: 691px;
-		left: 0px;
-		top: 0px;
-		overflow: visible;
-	}
-	#PROJECT_S__THE_ONLY_SOLUTION_Y {
-		left: 58.336px;
-		top: 363.791px;
-		position: absolute;
-		overflow: visible;
-		width: 1801px;
-		white-space: nowrap;
-		line-height: 86.4000015258789px;
-		margin-top: -13.200000762939453px;
-		text-align: center;
-		font-family: Bahnschrift-BoldCondensed;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 60px;
-		color: rgba(255,238,50,1);
-	}
-	#FEATURES {
-		left: 827.587px;
-		top: 721.206px;
-		position: absolute;
-		overflow: visible;
-		width: 265px;
+		width: 175px;
 		white-space: nowrap;
 		line-height: 72px;
 		margin-top: -6px;
@@ -120,117 +73,127 @@
 		font-size: 60px;
 		color: rgba(255,238,50,1);
 	}
-	#Rounded_Rectangle_1 {
-		fill: rgba(255,238,50,1);
+	#Rounded_Rectangle_2 {
+		fill: rgba(51,53,51,1);
 	}
-	.Rounded_Rectangle_1 {
+	.Rounded_Rectangle_2 {
 		position: absolute;
 		overflow: visible;
-		width: 483px;
-		height: 288px;
-		left: 158px;
-		top: 839px;
+		width: 750px;
+		height: 80px;
+		left: 215px;
+		top: 200px;
 	}
-	#yellowrectangle_1 {
-		fill: rgba(255,238,50,1);
+	#Rounded_Rectangle_2_copy {
+		fill: rgba(51,53,51,1);
 	}
-	.yellowrectangle_1 {
+	.Rounded_Rectangle_2_copy {
 		position: absolute;
 		overflow: visible;
-		width: 483px;
-		height: 288px;
-		left: 718px;
-		top: 839px;
+		width: 750px;
+		height: 80px;
+		left: 215px;
+		top: 320px;
 	}
-	#Rounded_Rectangle_1_copy_2 {
-		fill: rgba(255,238,50,1);
-	}
-	.Rounded_Rectangle_1_copy_2 {
+	#VERIFICATION {
+		left: 24.956px;
+		top: 461.511px;
 		position: absolute;
 		overflow: visible;
-		width: 483px;
-		height: 288px;
-		left: 1278px;
-		top: 839px;
+		width: 162px;
+		white-space: nowrap;
+		line-height: 43.20000076293945px;
+		margin-top: -9.100000381469727px;
+		text-align: right;
+		font-family: Bahnschrift-BoldCondensed;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(255,255,255,1);
 	}
-	#ATHOS_White_22x {
+	#Rounded_Rectangle_3 {
+		fill: rgba(51,53,51,1);
+	}
+	.Rounded_Rectangle_3 {
 		position: absolute;
-		width: 122px;
+		overflow: visible;
+		width: 459px;
 		height: 135px;
-		left: 36px;
-		top: 32px;
-		overflow: visible;
+		left: 215px;
+		top: 440px;
 	}
-	#PRICING {
-		left: 1608.227px;
-		top: 59px;
+	#EMAIL {
+		left: 109.814px;
+		top: 225.604px;
 		position: absolute;
 		overflow: visible;
-		width: 113px;
+		width: 76px;
 		white-space: nowrap;
-		line-height: 36px;
-		margin-top: -3px;
-		text-align: center;
+		line-height: 43.20000076293945px;
+		margin-top: -9.100000381469727px;
+		text-align: right;
 		font-family: Bahnschrift-BoldCondensed;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 30px;
+		font-size: 25px;
 		color: rgba(255,255,255,1);
 	}
-	#HOME_y {
-		left: 1476.532px;
-		top: 58.762px;
+	#PASSWORD {
+		left: 50.628px;
+		top: 343.503px;
 		position: absolute;
 		overflow: visible;
-		width: 87px;
+		width: 136px;
 		white-space: nowrap;
-		line-height: 36px;
-		margin-top: -3px;
-		text-align: center;
+		line-height: 43.20000076293945px;
+		margin-top: -9.100000381469727px;
+		text-align: right;
 		font-family: Bahnschrift-BoldCondensed;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 30px;
+		font-size: 25px;
 		color: rgba(255,255,255,1);
 	}
-	#ogin_Select {
-		position: absolute;
-		width: 86px;
-		height: 40px;
-		left: 1764.932px;
-		top: 59.326px;
-		overflow: visible;
-		--web-animation: fadein 0.3s ease-out;
-		--web-action-type: page;
-		--web-action-target: LOGIN___SIGNUP_POPUP.html;
-		cursor: pointer;
+	#Rounded_Rectangle_4 {
+		fill: rgba(32,32,32,1);
+		stroke: rgba(153,161,153,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 100;
+		shape-rendering: auto;
 	}
-	#LOGIN {
-		left: 0px;
-		top: 0px;
+	.Rounded_Rectangle_4 {
 		position: absolute;
 		overflow: visible;
-		width: 87px;
+		width: 45px;
+		height: 45px;
+		left: 238px;
+		top: 485px;
+	}
+	#Im_not_a_robot {
+		left: 299.354px;
+		top: 498.615px;
+		position: absolute;
+		overflow: visible;
+		width: 116px;
 		white-space: nowrap;
-		line-height: 36px;
-		margin-top: -3px;
-		text-align: center;
-		font-family: Bahnschrift-BoldCondensed;
+		line-height: 21.600000381469727px;
+		margin-top: -1.8000001907348633px;
+		text-align: left;
+		font-family: ArialMT;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 30px;
-		color: rgba(255,238,50,1);
+		font-size: 18px;
+		color: rgba(255,255,255,1);
 	}
-	#Rectangle_5 {
-		fill: rgba(255,238,50,1);
-	}
-	.Rectangle_5 {
+	#ID1024px-RecaptchaLogosvg {
 		position: absolute;
+		width: 117.029px;
+		height: 117.029px;
+		left: 551.228px;
+		top: 449.467px;
 		overflow: visible;
-		width: 53px;
-		height: 3px;
-		left: 16.068px;
-		top: 36.674px;
 	}
 </style>
 <script id="applicationScript">
@@ -3073,54 +3036,43 @@ window.application = new Application();
 </script>
 </head>
 <body>
-<div id="HOME">
-	<img id="Layer_1" src="Layer_1.png" srcset="Layer_1.png 1x, Layer_1@2x.png 2x">
-	<svg class="Rectangle_1">
-		<rect id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="1080">
+<div id="LOGIN__SIGNUP_POPUP">
+	<svg class="Rectangle_3">
+		<rect onclick="application.goToTargetView(event)" id="Rectangle_3" rx="0" ry="0" x="0" y="0" width="1080" height="800">
 		</rect>
 	</svg>
-	<div id="Rectangle_2">
-		<svg class="Rectangle_2_p">
-			<rect id="Rectangle_2_p" rx="0" ry="0" x="0" y="0" width="1920" height="691">
-			</rect>
-		</svg>
-		<img id="Clip" src="Clip.png" srcset="Clip.png 1x, Clip@2x.png 2x">
-		</svg>
+	<div id="LOGIN">
+		<span>LOGIN</span>
 	</div>
-	<div id="PROJECT_S__THE_ONLY_SOLUTION_Y">
-		<span>PROJECT S </span><span style="color:rgba(255,255,255,1);">|</span><span> </span><span style="color:rgba(255,255,255,1);">THE ONLY SOLUTION YOU NEED FOR LIVE BROADCAST</span>
-	</div>
-	<div id="FEATURES">
-		<span>FEATURES</span>
-	</div>
-	<svg class="Rounded_Rectangle_1">
-		<rect id="Rounded_Rectangle_1" rx="15" ry="15" x="0" y="0" width="483" height="288">
+	<svg class="Rounded_Rectangle_2">
+		<rect id="Rounded_Rectangle_2" rx="10" ry="10" x="0" y="0" width="750" height="80">
 		</rect>
 	</svg>
-	<svg class="yellowrectangle_1">
-		<rect id="yellowrectangle_1" rx="15" ry="15" x="0" y="0" width="483" height="288">
+	<svg class="Rounded_Rectangle_2_copy">
+		<rect id="Rounded_Rectangle_2_copy" rx="10" ry="10" x="0" y="0" width="750" height="80">
 		</rect>
 	</svg>
-	<svg class="Rounded_Rectangle_1_copy_2">
-		<rect id="Rounded_Rectangle_1_copy_2" rx="15" ry="15" x="0" y="0" width="483" height="288">
+	<div id="VERIFICATION">
+		<span>VERIFICATION:</span>
+	</div>
+	<svg class="Rounded_Rectangle_3">
+		<rect id="Rounded_Rectangle_3" rx="10" ry="10" x="0" y="0" width="459" height="135">
 		</rect>
 	</svg>
-	<img id="ATHOS_White_22x" src="ATHOS_White_22x.png" srcset="ATHOS_White_22x.png 1x, ATHOS_White_22x@2x.png 2x">
-	<div id="PRICING">
-		<span>PRICING</span>
+	<div id="EMAIL">
+		<span>EMAIL:</span>
 	</div>
-	<div id="HOME_y">
-		<span>HOME</span>
+	<div id="PASSWORD">
+		<span>PASSWORD:</span>
 	</div>
-	<div onclick="application.goToTargetView(event)" id="ogin_Select">
-		<div id="LOGIN">
-			<span>LOGIN</span>
-		</div>
-		<svg class="Rectangle_5">
-			<rect id="Rectangle_5" rx="0" ry="0" x="0" y="0" width="53" height="3">
-			</rect>
-		</svg>
+	<svg class="Rounded_Rectangle_4">
+		<rect id="Rounded_Rectangle_4" rx="10" ry="10" x="0" y="0" width="45" height="45">
+		</rect>
+	</svg>
+	<div id="Im_not_a_robot">
+		<span>I’m not a robot</span>
 	</div>
+	<img id="ID1024px-RecaptchaLogosvg" src="ID1024px-RecaptchaLogosvg.png" srcset="ID1024px-RecaptchaLogosvg.png 1x, ID1024px-RecaptchaLogosvg@2x.png 2x">
 </div>
 </body>
 </html>
