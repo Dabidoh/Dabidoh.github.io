@@ -1,0 +1,11 @@
+<!DOCTYPE html5>
+<body>
+	<div></div>
+	<script>
+		var here = window.location.href;
+		var url = new URL(here);
+		var content = url.searchParams.get('str');
+		var el = document.querySelector('div');
+		el.innerHTML = content.slice(1,content.length-1);
+	</script>
+</body>

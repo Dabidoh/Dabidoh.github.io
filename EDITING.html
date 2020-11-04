@@ -3792,7 +3792,24 @@
 
     }
 
- 
+ 	var saver = {
+ 		t_content: '', //$('#editor').trumbowyg('html'),
+ 		init: function(){
+ 			saver.listeners();
+ 		},
+ 		post: function(){
+ 			// $.post('raw_live_preview.html', {content: saver.t_content});
+ 			window.location.href = 'raw_live_preview.html?str="'+ saver.t_content+'"';
+ 		},
+ 		listeners: function(){
+ 			$('#Selection_bx').on('click', function(){
+ 				saver.post();
+ 			});
+ 			$('#editor').on('tbwchange', function(){
+ 				saver.t_content = $('.trumbowyg .trumbowyg-textarea').val();
+ 			});
+ 		}
+ 	}
 
     
 
@@ -3801,6 +3818,7 @@
     	$('#base-editor').prepend('<div class="package-name">Package_1</div>');
     	// remove the default onclick event
     	$('#Selection_bx').attr('onclick','');
+    	saver.init();
     });
     </script>
 </body>
