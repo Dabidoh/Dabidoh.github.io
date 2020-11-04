@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EDITING</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/ui/trumbowyg.min.css" integrity="sha512-XjpikIIW1P7jUS8ZWIznGs9KHujZQxhbnEsqMVQ5GBTTRmmJe32+ULipOxFePB8F8j9ahKmCjyJJ22VNEX60yg==" crossorigin="anonymous" />
 <style id="applicationStylesheet" type="text/css">
 	.mediaViewInfo {
 		--web-view-name: EDITING;
@@ -633,6 +634,81 @@
 		top: 203.313px;
 		overflow: visible;
 	}
+
+
+	#base-editor{
+	 /*   width: 71%;
+	    height: 100%;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    transform: translate(18%, 17%);*/
+	}
+
+	.relative{
+		position: relative;
+	}
+
+	.op-0{
+		opacity: 0;
+	}
+
+	/*styling for html editor*/
+	#base-editor .trumbowyg-box, #base-editor .trumbowyg-editor-hidden .trumbowyg-textarea{
+		margin: 0 auto;
+		height: 100%;
+		border: none;
+	}
+
+	#base-editor .trumbowyg-textarea, #base-editor .trumbowyg-editor-hidden .trumbowyg-textarea{
+	    margin-top: 45px;
+	}
+
+	#base-editor #editor, #base-editor .trumbowyg-editor-hidden .trumbowyg-textarea{
+	    border: 5px solid #FFEE32;
+	    border-radius: 5px;
+	    background-color: #fff;
+	}
+
+	.trumbowyg-editor-hidden .trumbowyg-textarea{
+		border-color: #cccr !important;
+	}
+
+	#base-editor .trumbowyg-button-pane{
+		background-color: transparent;
+		border: none;
+	}
+
+	#base-editor .trumbowyg-button-pane::after{
+		height: 0;
+		width: 0;
+		background: transparent;
+	}
+
+	#base-editor .trumbowyg-button-group{
+		background-color: transparent;
+		color: #FFEE32;
+	}
+
+	#base-editor .trumbowyg-button-group button:hover{
+		background-color: rgba(255,255,255,0.2);
+		color: #FFEE32;
+	}
+
+	#base-editor svg{
+		fill: #FFEE32 !important;
+	}
+
+	#base-editor .trumbowyg-viewHTML-button svg path{
+		stroke: #FFEE32 !important;
+	}
+
+	#base-editor .trumbowyg-button-group::after,#base-editor .trumbowyg-button-group::before{
+		height: 0;
+		width: 0;
+		background: transparent;
+	}
+
 </style>
 <script id="applicationScript">
 ///////////////////////////////////////
@@ -3474,12 +3550,12 @@ window.application = new Application();
 </script>
 </head>
 <body>
-<div id="EDITING">
+<div id="EDITING" class="relative">
 	<svg class="Rectangle_6">
 		<rect id="Rectangle_6" rx="0" ry="0" x="0" y="0" width="1920" height="1080">
 		</rect>
 	</svg>
-	<div id="Icons">
+	<div id="Icons" class="op-0">
 		<img id="loupe" src="loupe.png" srcset="loupe.png 1x, loupe@2x.png 2x">
 		<img id="redo-arrow" src="redo-arrow.png" srcset="redo-arrow.png 1x, redo-arrow@2x.png 2x">
 		<img id="back-arrow" src="back-arrow.png" srcset="back-arrow.png 1x, back-arrow@2x.png 2x">
@@ -3595,7 +3671,7 @@ window.application = new Application();
 		<rect id="Rectangle_11" rx="0" ry="0" x="0" y="0" width="1280" height="720">
 		</rect>
 	</svg>
-	<img id="background" src="background.png" srcset="background.png 1x, background@2x.png 2x">
+	<img id="background" src="background.png" srcset="background.png 1x, background@2x.png 2x" class="op-0">
 	<div id="SAVE">
 		<span>SAVE</span>
 	</div>
@@ -3615,6 +3691,54 @@ window.application = new Application();
 		</svg>
 	</div>
 	<img id="csv" src="csv.png" srcset="csv.png 1x, csv@2x.png 2x">
+	<div id="base-editor">
+		<div id="editor"></div>
+	</div>
+
 </div>
+
+
+<!-- Import jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<!-- Import Trumbowyg -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/trumbowyg.min.js" integrity="sha512-l6MMck8/SpFCgbJnIEfVsWQ8MaNK/n2ppTiELW3I2BFY5pAm/WjkNHSt+2OD7+CZtygs+jr+dAgzNdjNuCU7kw==" crossorigin="anonymous"></script>
+<script>
+	$('#editor').trumbowyg();
+	var ed_ref = $('#background')
+	var ed_width = ed_ref.width();
+	var ed_height = ed_ref.height();
+	var ed_pos = ed_ref.offset();
+	var ed_left = ed_pos.left;
+	var ed_top = ed_pos.top;
+	var ed_b_height = ed_height*1.1;
+	var ed_b_top = ed_top*0.7;
+	var svg_color = $('#base-editor svg').css('fill');
+	console.log(svg_color)
+
+	$("#base-editor").css({
+		width: ed_width+'px',
+		height: ed_b_height+'px',
+		position: 'absolute',
+		left: ed_left+'px',
+		top: ed_b_top+'px'
+	});
+
+	$("#base-editor #editor").css({
+		width: ed_width+'px',
+		height: (ed_height)+'px',
+	});
+
+	$('.trumbowyg-view-html path').attr('stroke',svg_color)
+
+	$('.trumbowyg-viewHTML-button').on('click', function(){
+		$("#base-editor .trumbowyg-editor-hidden .trumbowyg-textarea").css({
+			width: ed_width+'px',
+			height: (ed_height)+'px',
+		});
+	})
+	
+</script>
 </body>
 </html>
